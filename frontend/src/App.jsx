@@ -1,28 +1,36 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from 'react';
 
-function App() {
-  const [data, setData] = useState([{}])
+const App = () => {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
-    fetch("/members").then(
-      res => res.json()
-    ).then(
-      data => {
-        setData(data)
-        console.log(data)
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/members');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const jsonData = await response.json();
+        setData(jsonData);
       }
-    )
-  }, [])
+      catch (error) {
+        setError(error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (error) return <div>Error: {error}</div>;
+  if (!data) return <div>Loading...</div>;
+
   return (
     <div>
-      {(typeof data.members === 'undefined') ? (
-        <p>Loading...</p>
-      ) : (
-        data.members.map((member, i) => (
-          <p key={i}>(member)</p>
-        ))
-      )}
+      <h1>Data from API</h1>
+      <p>{JSON.stringify(data, null, 2)}</p>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
