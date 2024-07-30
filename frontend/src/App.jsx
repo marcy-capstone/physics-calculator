@@ -7,7 +7,7 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/members');
+        const response = await fetch('/api/members');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
