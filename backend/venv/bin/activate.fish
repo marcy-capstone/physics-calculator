@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/marcy/Development/projects/Full-Stack-Flask-React-and-Postgres-YT-Tutorial/backend/venv"
+set -gx VIRTUAL_ENV "/Users/marcy/Development/projects/capstone/flask-react-project-python-backend-react-frontend/backend/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

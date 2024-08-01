@@ -1,4 +1,4 @@
-#!/Users/marcy/Development/projects/Full-Stack-Flask-React-and-Postgres-YT-Tutorial/backend/venv/bin/python3.12
+#!/Users/marcy/Development/projects/capstone/flask-react-project-python-backend-react-frontend/backend/venv/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys
