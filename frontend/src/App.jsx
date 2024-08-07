@@ -26,10 +26,30 @@ const App = () => {
   if (!data) return <div>Loading...</div>;
 
   return (
-    <div>
-      <h1>Data from API</h1>
-      <p>{JSON.stringify(data, null, 2)}</p>
-    </div>
+    <body className='is-flex-direction-column'>
+        <h1 className='has-text-white'>Data from API</h1>
+        <p className='has-text-white'>{JSON.stringify(data, null, 2)}</p>
+      <div>
+        <form action="{{ url_for('submit') }}" method="POST">
+          <label className='label has-text-white'>Equation</label>
+          <div className="control">
+              <div className="select">
+              <select className="option">
+                <option>Choose...</option>
+                <option value="velocity">Velocity</option>
+                <option value="force">Force</option>
+                <option value="power">Power</option>
+              </select>
+              </div>
+          </div>
+          <div className="field is-grouped">
+            <div className="control">
+            <button className="button is-link">Submit</button>
+          </div>
+          </div>
+        </form>
+      </div>
+    </body>
   );
 };
 
