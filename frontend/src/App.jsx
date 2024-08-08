@@ -1,44 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {Routes, Route} from "react-router-dom";
 import HomePage from './pages/HomePage'
 import VelocityPage from './pages/VelocityPage'
 import ForcePage from './pages/ForcePage'
 import PowerPage from './pages/PowerPage'
+import BackendTest from './BackendTest'
 
 const App = () => {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('/api/members');
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const jsonData = await response.json();
-        setData(jsonData);
-      }
-      catch (error) {
-        setError(error.message);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (error) return <div>Error: {error}</div>;
-  if (!data) return <div>Loading...</div>;
-
   return (
     <>
-      <h1 className='has-text-white'>Data from API</h1>
-      <p className='has-text-white'>{JSON.stringify(data, null, 2)}</p>
+    {/* <BackendTest /> */}
+    <h1 className='has-text-white'>Maya's Physics Calculator!</h1>
       <Routes>
-        <Route path="/" element={<HomePage />}/>
-        <Route path="/velocity" element={<VelocityPage />}/>
-        <Route path="/force" element={<ForcePage />}/>
-        <Route path="/power" element={<PowerPage />}/>
+        <Route path="/static" element={<HomePage />}/>
+        <Route path="/static/velocity" element={<VelocityPage />}/>
+        <Route path="/static/force" element={<ForcePage />}/>
+        <Route path="/static/power" element={<PowerPage />}/>
       </Routes>
     </>
   );
