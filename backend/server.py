@@ -1,6 +1,5 @@
-from flask import Flask
-
-app = Flask(__name__)
+from flask import Flask, render_template, request, redirect, url_for
+app = Flask(__name__, template_folder='templates')
 
 # Members API Route
 @app.route('/api/members')
@@ -10,6 +9,19 @@ def members():
 @app.route('/')
 def serve_static():
     return app.send_static_file('index.html')
+
+# # Replicate these in React!!!
+# @app.route('/velocity')
+# def velocity():
+#     return render_template('velocity.html')
+
+# @app.route('/force')
+# def force():
+#     return render_template('force.html')
+
+# @app.route('/power')
+# def power():
+#     return render_template('power.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

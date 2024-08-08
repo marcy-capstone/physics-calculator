@@ -1,4 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import {Routes, Route, Switch} from "react-router-dom";
+import HomePage from './pages/HomePage'
+import VelocityPage from './pages/VelocityPage'
+import ForcePage from './pages/ForcePage'
+import PowerPage from './pages/PowerPage'
 
 const App = () => {
   const [data, setData] = useState(null);
@@ -26,30 +31,16 @@ const App = () => {
   if (!data) return <div>Loading...</div>;
 
   return (
-    <body className='is-flex-direction-column'>
+    <>
         <h1 className='has-text-white'>Data from API</h1>
         <p className='has-text-white'>{JSON.stringify(data, null, 2)}</p>
-      <div>
-        <form action="{{ url_for('submit') }}" method="POST">
-          <label className='label has-text-white'>Equation</label>
-          <div className="control">
-              <div className="select">
-              <select className="option">
-                <option>Choose...</option>
-                <option value="velocity">Velocity</option>
-                <option value="force">Force</option>
-                <option value="power">Power</option>
-              </select>
-              </div>
-          </div>
-          <div className="field is-grouped">
-            <div className="control">
-            <button className="button is-link">Submit</button>
-          </div>
-          </div>
-        </form>
-      </div>
-    </body>
+      <Routes>
+        <Route path="/static" element={<HomePage />}/>
+        <Route path="/static/velocity" element={<VelocityPage />}/>
+        <Route path="/static/force" element={<ForcePage />}/>
+        <Route path="/static/power" element={<PowerPage />}/>
+      </Routes>
+    </>
   );
 };
 
