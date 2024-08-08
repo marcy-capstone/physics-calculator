@@ -1,5 +1,5 @@
 export default function ForcePage() {
     return (
-        <h1>Force</h1>
+        <h1 className='has-text-white'>Force</h1>
     )
 }

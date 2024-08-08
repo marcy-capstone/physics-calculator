@@ -1,5 +1,5 @@
 export default function PowerPage() {
     return (
-        <h1>Power</h1>
+        <h1 className='has-text-white'>Power</h1>
     )
 }

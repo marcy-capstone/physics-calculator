@@ -10,18 +10,5 @@ def members():
 def serve_static():
     return app.send_static_file('index.html')
 
-# # Replicate these in React!!!
-# @app.route('/velocity')
-# def velocity():
-#     return render_template('velocity.html')
-
-# @app.route('/force')
-# def force():
-#     return render_template('force.html')
-
-# @app.route('/power')
-# def power():
-#     return render_template('power.html')
-
 if __name__ == '__main__':
     app.run(debug=True)

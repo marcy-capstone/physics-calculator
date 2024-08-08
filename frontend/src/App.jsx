@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Routes, Route, Switch} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import HomePage from './pages/HomePage'
 import VelocityPage from './pages/VelocityPage'
 import ForcePage from './pages/ForcePage'
@@ -32,13 +32,13 @@ const App = () => {
 
   return (
     <>
-        <h1 className='has-text-white'>Data from API</h1>
-        <p className='has-text-white'>{JSON.stringify(data, null, 2)}</p>
+      <h1 className='has-text-white'>Data from API</h1>
+      <p className='has-text-white'>{JSON.stringify(data, null, 2)}</p>
       <Routes>
-        <Route path="/static" element={<HomePage />}/>
-        <Route path="/static/velocity" element={<VelocityPage />}/>
-        <Route path="/static/force" element={<ForcePage />}/>
-        <Route path="/static/power" element={<PowerPage />}/>
+        <Route path="/" element={<HomePage />}/>
+        <Route path="/velocity" element={<VelocityPage />}/>
+        <Route path="/force" element={<ForcePage />}/>
+        <Route path="/power" element={<PowerPage />}/>
       </Routes>
     </>
   );

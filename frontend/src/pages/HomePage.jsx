@@ -1,28 +1,41 @@
+import React, { useEffect, useState } from 'react';
+import ForcePage from './ForcePage';
+import VelocityPage from './VelocityPage';
+import PowerPage from './PowerPage';
+
+const EQUATIONS = [
+    { name: 'Velocity', component: <VelocityPage />},
+    { name: 'Force', component: <ForcePage />},
+    { name: 'Power', component: <PowerPage />},
+]
+
 export default function HomePage() {
+    const [equation, setEquation] = useState(''); // State to manage form data
+
+    const handleChange = (event) => {
+        setEquation(event.target.value);
+    };
+
     return (
-        <>
-            <h1 className='has-text-white'>Home</h1>
-            <div>
-            <form action="{{ url_for('submit') }}" method="POST">
-            <label className='label has-text-white'>Equation</label>
-            <div className="control">
-                <div className="select">
-                <select className="option">
-                    <option>Choose...</option>
-                    <option value="velocity">Velocity</option>
-                    <option value="force">Force</option>
-                    <option value="power">Power</option>
-                </select>
-                </div>
-            </div>
-            <div className="field is-grouped">
+        <div>
+            <form>
+                <label className='label has-text-white'>Equation</label>
                 <div className="control">
-                <button className="button is-link">Submit</button>
-            </div>
-            </div>
+                    <div className="select">
+                        <select className="option" onChange={handleChange} value={equation}>
+                            <option>Choose...</option>
+                            {
+                                EQUATIONS.map((equation) => {
+                                    return <option key={equation.name} value={equation.name}>{equation.name}</option>
+                                })
+                            }
+                        </select>
+                    </div>
+                </div>
             </form>
-            </div>
-        </>
-        
+            {
+                EQUATIONS.find((eq) => eq.name === equation)?.component
+            }
+        </div>
     )
 }
