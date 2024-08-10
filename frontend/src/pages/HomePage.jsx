@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ForcePage from './ForcePage';
 import VelocityPage from './VelocityPage';
 import PowerPage from './PowerPage';
@@ -17,8 +17,7 @@ export default function HomePage() {
     };
 
     return (
-        <div>
-            <form>
+        <div className="field">
                 <label className='label has-text-white'>Equation</label>
                 <div className="control">
                     <div className="select">
@@ -32,7 +31,6 @@ export default function HomePage() {
                         </select>
                     </div>
                 </div>
-            </form>
             {
                 EQUATIONS.find((eq) => eq.name === equation)?.component
             }

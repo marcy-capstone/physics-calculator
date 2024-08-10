@@ -1,6 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import VPage from './variables/VPage'
+import VdPage from './variables/VdPage'
+import VtPage from './variables/VtPage'
 
-const VARIABLES = ['V', 'd', 't']
+const VARIABLES = [
+    { name: 'V', component: <VPage />},
+    // Future Pages
+    { name: 'd', component: <VdPage />},
+    { name: 't', component: <VtPage />},
+]
 
 export default function VelocityPage() {
     const [variable, setVariable] = useState(''); // State to manage form data
@@ -11,22 +19,25 @@ export default function VelocityPage() {
 
     return (
         <>
-        <h1 className='has-text-white'>Velocity</h1>
-        <form>
-                <label className='label has-text-white'>Variables</label>
-                <div className="control">
-                    <div className="select">
-                        <select className="option" onChange={handleChange} value={variable}>
-                            <option>V/d/t</option>
-                            {
-                                VARIABLES.map((variable) => {
-                                    return <option key={variable} value={variable}>{variable}</option>
-                                })
-                            }
-                        </select>
-                    </div>
+        <h1 className='has-text-white has-text-weight-bold'>Velocity</h1>
+        <div className="field">
+            <label className='label has-text-white'>Variables</label>
+            <div className="control">
+                <div className="select">
+                    <select className="option" onChange={handleChange} value={variable}>
+                        <option>V/d/t</option>
+                        {
+                            VARIABLES.map((variable) => {
+                                return <option key={variable.name} value={variable.name}>{variable.name}</option>
+                            })
+                        }
+                    </select>
                 </div>
-            </form>
+            </div>
+        {
+             VARIABLES.find((vari) => vari.name === variable)?.component
+        }
+        </div>
         </>
         
     )
