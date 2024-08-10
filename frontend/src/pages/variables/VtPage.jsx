@@ -31,20 +31,26 @@ export default function VtPage() {
         <>
             <h1 className='has-text-white has-text-weight-bold'>Solving for t!</h1>
             <h1 className='has-text-white has-text-weight-medium is-size-2'>t = d/V</h1>
-                <div className="field">
-                <label className="label has-text-white ">V</label>
+            <div className="field is-horizontal">
+                <label className="label has-text-white ">V =</label>
                     <div className="control">
-                        <input className="input column is-2" type="number" value={V} onChange={handleVChange} name="V" placeholder="V ="/>
-                </div>
-                    <label className="label has-text-white">d</label>
-                    <div className="control">
-                        <input className="input column is-2" type="number" value={Vd} onChange={handleVdChange} name="Vd" placeholder="d ="/>
+                        <input className="input column is-4 ml-2" type="number" value={V} onChange={handleVChange} name="V" placeholder="V ="/>
                     </div>
-                    <label className="label has-text-white">t</label>
-                    <div className="control">
-                        <input className="input column is-1" type="number" placeholder="?" disabled/>
                     </div>
-                </div>
+
+            <div className="field is-horizontal">
+                    <label className="label has-text-white">d =</label>
+                    <div className="control">
+                        <input className="input column is-4 ml-2" type="number" value={Vd} onChange={handleVdChange} name="Vd" placeholder="d ="/>
+                    </div>
+                    </div>
+
+            <div className="field is-horizontal">
+                    <label className="label has-text-white">t =</label>
+                    <div className="control">
+                        <input className="input column is-4 ml-3" type="number" placeholder="?" disabled/>
+                    </div>
+                    </div>
                 <div className="field">
                 <div className="control">
                     <button className="button is-link" onClick={calculateT}>Calculate t!</button>

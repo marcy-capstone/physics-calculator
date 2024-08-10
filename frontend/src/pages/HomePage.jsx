@@ -17,7 +17,7 @@ export default function HomePage() {
     };
 
     return (
-        <div className="field">
+        <>
                 <label className='label has-text-white'>Equation</label>
                 <div className="control">
                     <div className="select">
@@ -34,6 +34,6 @@ export default function HomePage() {
             {
                 EQUATIONS.find((eq) => eq.name === equation)?.component
             }
-        </div>
+        </>
     )
 }

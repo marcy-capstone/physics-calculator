@@ -31,18 +31,22 @@ export default function VdPage() {
         <>
             <h1 className='has-text-white has-text-weight-bold'>Solving for d!</h1>
             <h1 className='has-text-white has-text-weight-medium is-size-2'>d = Vt</h1>
-                <div className="field">
-                <label className="label has-text-white ">V</label>
+            <div className="field is-horizontal">
+                <label className="label has-text-white ">V =</label>
                     <div className="control">
-                        <input className="input column is-2" type="number" value={V} onChange={handleVChange} name="V" placeholder="V ="/>
+                        <input className="input column is-4 ml-2" type="number" value={V} onChange={handleVChange} name="V" placeholder="V ="/>
                 </div>
-                    <label className="label has-text-white">d</label>
+            </div>
+            <div className="field is-horizontal">
+                    <label className="label has-text-white">d =</label>
                     <div className="control">
-                        <input className="input column is-1" type="number" placeholder="?" disabled/>
+                        <input className="input column is-4 ml-2" type="number" placeholder="?" disabled/>
                     </div>
-                    <label className="label has-text-white">t</label>
+            </div>
+            <div className="field is-horizontal">
+                    <label className="label has-text-white">t =</label>
                     <div className="control">
-                        <input className="input column is-2" type="number" value={Vt} onChange={handleVtChange} name="Vt" placeholder="t ="/>
+                        <input className="input column is-4 ml-3" type="number" value={Vt} onChange={handleVtChange} name="Vt" placeholder="t ="/>
                     </div>
                 </div>
                 <div className="field">
