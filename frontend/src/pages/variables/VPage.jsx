@@ -52,7 +52,7 @@ export default function VPage() {
             </div>
             {result !== null && (
                 <div className="field">
-                    <p className='has-text-white'>V = {result}</p>
+                    <p className='has-text-white'>V = {result} m/s</p>
                 </div>
             )}
         </>
