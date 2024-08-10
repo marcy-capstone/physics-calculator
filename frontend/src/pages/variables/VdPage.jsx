@@ -37,8 +37,8 @@ export default function VdPage() {
                         <input className="input column is-2" type="number" value={V} onChange={handleVChange} name="V" placeholder="V ="/>
                 </div>
                     <label className="label has-text-white">d</label>
-                        <input className="input column is-1" type="number" placeholder="?" disabled/>
                     <div className="control">
+                        <input className="input column is-1" type="number" placeholder="?" disabled/>
                     </div>
                     <label className="label has-text-white">t</label>
                     <div className="control">

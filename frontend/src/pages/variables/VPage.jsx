@@ -27,25 +27,38 @@ export default function VPage() {
                 setResult('Invalid input'); // Handle invalid cases
             }
         };
+
+        const handleKeyPress = (event) => {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent form submission
+                calculateV();
+            }
+        };
     return (
         <>
             <h1 className='has-text-white has-text-weight-bold'>Solving for V!</h1>
-            <h1 className='has-text-white has-text-weight-medium is-size-2'>V = d/t</h1>
-                <div className="field">
-                <label className="label has-text-white ">V</label>
+            <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3'>V = d/t</h1>
+            {/* <div className='box has-background-grey-dark' style={{ outline: '5px solid black', maxWidth: '277px'}}> */}
+                <div className="field is-horizontal">
+                    <label className="label has-text-white">V =</label>
                     <div className="control">
-                    <input className="input column is-1" type="number" placeholder="?" disabled/>
-                </div>
-                    <label className="label has-text-white">d</label>
-                    <div className="control">
-                        <input className="input column is-2" type="number" value={Vd} onChange={handleVdChange} name="Vd" placeholder="d ="/>
-                    </div>
-                    <label className="label has-text-white">t</label>
-                    <div className="control">
-                        <input className="input column is-2" type="number" value={Vt} onChange={handleVtChange} name="Vt" placeholder="t ="/>
+                        <input className="input column is-4 ml-2" type="number" placeholder="?" disabled />
                     </div>
                 </div>
-                <div className="field">
+                <div className="field is-horizontal">
+                    <label className="label has-text-white">d =</label>
+                    <div className="control">
+                        <input className="input column is-4 ml-2" type="number" value={Vd} onChange={handleVdChange} onKeyDown={handleKeyPress} name="Vd" placeholder="d ="/>
+                    </div>
+                </div>
+                <div className="field is-horizontal">
+                    <label className="label has-text-white">t =</label>
+                    <div className="control">
+                        <input className="input column is-4 ml-3" type="number" value={Vt} onChange={handleVtChange} onKeyDown={handleKeyPress} name="Vt" placeholder="t ="/>
+                    </div>
+                </div>
+            {/* </div> */}
+            <div className="field">
                 <div className="control">
                     <button className="button is-link" onClick={calculateV}>Calculate V!</button>
                 </div>
