@@ -5,7 +5,6 @@ import VtPage from './variables/VtPage'
 
 const VARIABLES = [
     { name: 'V', component: <VPage />},
-    // Future Pages
     { name: 'd', component: <VdPage />},
     { name: 't', component: <VtPage />},
 ]
