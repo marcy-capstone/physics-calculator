@@ -27,14 +27,21 @@ export default function VdPage() {
                 setResult('Invalid input'); // Handle invalid cases
             }
         };
+
+        const handleKeyPress = (event) => {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent form submission
+                calculateD();
+            }
+        };
     return (
         <>
             <h1 className='has-text-white has-text-weight-bold'>Solving for d!</h1>
-            <h1 className='has-text-white has-text-weight-medium is-size-2'>d = Vt</h1>
+            <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3'>d = Vt</h1>
             <div className="field is-horizontal">
                 <label className="label has-text-white ">V =</label>
                     <div className="control">
-                        <input className="input column is-4 ml-2" type="number" value={V} onChange={handleVChange} name="V" placeholder="V ="/>
+                        <input className="input column is-4 ml-2" type="number" value={V} onChange={handleVChange} onKeyDown={handleKeyPress} name="V" placeholder="V ="/>
                 </div>
             </div>
             <div className="field is-horizontal">
@@ -46,7 +53,7 @@ export default function VdPage() {
             <div className="field is-horizontal">
                     <label className="label has-text-white">t =</label>
                     <div className="control">
-                        <input className="input column is-4 ml-3" type="number" value={Vt} onChange={handleVtChange} name="Vt" placeholder="t ="/>
+                        <input className="input column is-4 ml-3" type="number" value={Vt} onChange={handleVtChange} onKeyDown={handleKeyPress} name="Vt" placeholder="t ="/>
                     </div>
                 </div>
                 <div className="field">

@@ -27,10 +27,16 @@ export default function VtPage() {
                 setResult('Invalid input'); // Handle invalid cases
             }
         };
+
+        const handleKeyPress = (event) => {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent form submission
+                calculateT();
+            }
     return (
         <>
             <h1 className='has-text-white has-text-weight-bold'>Solving for t!</h1>
-            <h1 className='has-text-white has-text-weight-medium is-size-2'>t = d/V</h1>
+            <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3'>t = d/V</h1>
             <div className="field is-horizontal">
                 <label className="label has-text-white ">V =</label>
                     <div className="control">
@@ -41,7 +47,7 @@ export default function VtPage() {
             <div className="field is-horizontal">
                     <label className="label has-text-white">d =</label>
                     <div className="control">
-                        <input className="input column is-4 ml-2" type="number" value={Vd} onChange={handleVdChange} name="Vd" placeholder="d ="/>
+                        <input className="input column is-4 ml-2" type="number" value={Vd} onChange={handleVdChange} onKeyDown={handleKeyPress} name="Vd" placeholder="d ="/>
                     </div>
                     </div>
 
