@@ -33,6 +33,7 @@ export default function VtPage() {
                 event.preventDefault(); // Prevent form submission
                 calculateT();
             }
+        };
     return (
         <>
             <h1 className='has-text-white has-text-weight-bold'>Solving for t!</h1>
