@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import PPage from './variables/PPage'
-import PwPage from './variables/PwPage'
-import PtPage from './variables/PtPage'
+import PPage from '../components/PPage'
+import PwPage from '../components/PwPage'
+import PtPage from '../components/PtPage'
 
 const VARIABLES = [
     { name: 'P', component: <PPage />},

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import VPage from './variables/VPage'
-import VdPage from './variables/VdPage'
-import VtPage from './variables/VtPage'
+import VPage from '../components/VPage'
+import VdPage from '../components/VdPage'
+import VtPage from '../components/VtPage'
 
 const VARIABLES = [
     { name: 'V', component: <VPage />},

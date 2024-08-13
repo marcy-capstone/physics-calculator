@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import FPage from './variables/FPage'
-import FmPage from './variables/FmPage'
-import FaPage from './variables/FaPage'
+import FPage from '../components/FPage'
+import FmPage from '../components/FmPage'
+import FaPage from '../components/FaPage'
 
 const VARIABLES = [
     { name: 'F', component: <FPage />},
