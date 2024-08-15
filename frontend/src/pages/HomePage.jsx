@@ -1,8 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import ForcePage from './ForcePage';
-import VelocityPage from './VelocityPage';
-import PowerPage from './PowerPage';
 
 const EQUATIONS = [
     { name: 'Velocity', route: "/static/velocity"},
