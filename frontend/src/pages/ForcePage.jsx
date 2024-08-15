@@ -9,35 +9,29 @@ const VARIABLES = [
     { name: 'a', component: <FaPage />},
 ]
 
-export default function VelocityPage() {
-    const [variable, setVariable] = useState(''); // State to manage form data
+export default function ForcePage() {
+    const [component, setComponent] = useState(null);
 
-    const handleChange = (event) => {
-        setVariable(event.target.value);
+    const handleClick = (component) => {
+        setComponent(component);
     };
 
     return (
         <>
-        <h1 className='has-text-white has-text-weight-bold'>Force</h1>
-        <div className="field">
-            <label className='label has-text-white'>Variables</label>
-            <div className="control">
-                <div className="select">
-                    <select className="option" onChange={handleChange} value={variable}>
-                        <option>F/m/a</option>
-                        {
-                            VARIABLES.map((variable) => {
-                                return <option key={variable.name} value={variable.name}>{variable.name}</option>
-                            })
-                        }
-                    </select>
-                </div>
+        <h1 className='has-text-white has-text-weight-bold is-flex is-justify-content-center'>Power</h1>
+        <div className='is-flex-direction-column'>
+            <label className='label has-text-white is-large is-flex is-justify-content-center'>Variables</label>
+            <div className='is-flex is-justify-content-center'>
+                    {
+                        VARIABLES.map((variable) => {
+                            return <button className='button is-link is-large mx-6' key={variable.name} value={variable.name} onClick={() => handleClick(variable.component)}>{variable.name}</button>
+                        })
+                    }
             </div>
-        {
-             VARIABLES.find((vari) => vari.name === variable)?.component
-        }
+        </div>
+        <div>
+            {component}
         </div>
         </>
-        
     )
 }
