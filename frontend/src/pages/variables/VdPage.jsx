@@ -43,10 +43,10 @@ export default function VdPage() {
                 <label className="label has-text-white ">V =</label>
                         <input className="input column is-1 ml-2" type="number" value={V} onChange={handleVChange} onKeyDown={handleKeyPress} name="V" placeholder="V ="/>
             </div>
-            <div className="field is-horizontal is-flex is-justify-content-center">
+            {/* <div className="field is-horizontal is-flex is-justify-content-center">
                     <label className="label has-text-white">d =</label>
                         <input className="input column is-1 ml-1" type="number" placeholder="?" disabled/>
-            </div>
+            </div> */}
             <div className="field is-horizontal is-flex is-justify-content-center">
                     <label className="label has-text-white">t =</label>
                         <input className="input column is-1 ml-2" type="number" value={Vt} onChange={handleVtChange} onKeyDown={handleKeyPress} name="Vt" placeholder="t ="/>

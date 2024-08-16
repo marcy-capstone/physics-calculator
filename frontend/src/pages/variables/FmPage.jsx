@@ -43,10 +43,10 @@ export default function FmPage() {
                 <label className="label has-text-white">F =</label>
                         <input className="input column is-1 ml-2" type="number" value={F} onChange={handleFChange} onKeyDown={handleKeyPress} name="F" placeholder="F ="/>
             </div>
-            <div className="field is-horizontal is-flex is-justify-content-center">
+            {/* <div className="field is-horizontal is-flex is-justify-content-center">
                     <label className="label has-text-white">m =</label>
                         <input className="input column is-1 ml-1" type="number" placeholder="?" disabled/>
-            </div>
+            </div> */}
             <div className="field is-horizontal is-flex is-justify-content-center">
                     <label className="label has-text-white">a =</label>
                         <input className="input column is-1 ml-3" type="number" value={Fa} onChange={handleFaChange} onKeyDown={handleKeyPress} name="Fa" placeholder="a ="/>

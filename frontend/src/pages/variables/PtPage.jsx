@@ -47,10 +47,10 @@ export default function PtPage() {
                         <label className="label has-text-white">W =</label>
                             <input className="input column is-1 ml-1" type="number" value={Pw} onChange={handlePwChange} onKeyDown={handleKeyPress} name="Pw" placeholder="W ="/>
                         </div>
-                <div className="field is-horizontal is-flex is-justify-content-center">
+                {/* <div className="field is-horizontal is-flex is-justify-content-center">
                         <label className="label has-text-white">t =</label>
                             <input className="input column is-1 ml-3" type="number" placeholder="?" disabled/>
-                        </div>
+                        </div> */}
                     <div className="field">
                     <div className="control is-flex is-justify-content-center ml-5">
                         <button className="button is-link" onClick={calculatePt}>Calculate t!</button>

@@ -49,10 +49,10 @@ export default function VtPage() {
                         <input className="input column is-1 ml-1" type="number" value={Vd} onChange={handleVdChange} onKeyDown={handleKeyPress} name="Vd" placeholder="d ="/>
                     </div>
 
-            <div className="field is-horizontal is-flex is-justify-content-center">
+            {/* <div className="field is-horizontal is-flex is-justify-content-center">
                     <label className="label has-text-white">t =</label>
                         <input className="input column is-1 ml-2" type="number" placeholder="?" disabled/>
-                    </div>
+                    </div> */}
                 <div className="field">
                 <div className="control is-flex is-justify-content-center ml-5">
                     <button className="button is-link" onClick={calculateT}>Calculate t!</button>

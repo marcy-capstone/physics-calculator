@@ -40,10 +40,10 @@ export default function FPage() {
             <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3 is-flex is-justify-content-center'>F = m•a</h1>
             {/* <div className='box has-background-grey-dark' style={{ outline: '5px solid black', maxWidth: '277px'}}> */}
             <div className='is-flex is-flex-direction-column'>
-                <div className="field is-horizontal is-flex is-justify-content-center">
+                {/* <div className="field is-horizontal is-flex is-justify-content-center">
                     <label className="label has-text-white">F =</label>
                         <input className="input column is-1 ml-2" type="number" placeholder="?" disabled />
-                </div>
+                </div> */}
                 <div className="field is-horizontal is-flex is-justify-content-center">
                     <label className="label has-text-white">m =</label>
                         <input className="input column is-1 ml-1" type="number" value={Fm} onChange={handleFmChange} onKeyDown={handleKeyPress} name="Fm" placeholder="m ="/>

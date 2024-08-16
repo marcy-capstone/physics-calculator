@@ -43,10 +43,10 @@ export default function PwPage() {
                     <label className="label has-text-white ">P =</label>
                     <input className="input column is-1 ml-2" type="number" value={P} onChange={handlePChange} onKeyDown={handleKeyPress} name="P" placeholder="P ="/>
                 </div>
-                <div className="field is-horizontal is-flex is-justify-content-center">
+                {/* <div className="field is-horizontal is-flex is-justify-content-center">
                         <label className="label has-text-white">W =</label>
                         <input className="input column is-1 ml-1" type="number" placeholder="?" disabled/>
-                </div>
+                </div> */}
                 <div className="field is-horizontal is-flex is-justify-content-center">
                         <label className="label has-text-white">t =</label>
                         <input className="input column is-1 ml-3" type="number" value={Pt} onChange={handlePtChange} onKeyDown={handleKeyPress} name="Pt" placeholder="t ="/>

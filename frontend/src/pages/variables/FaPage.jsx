@@ -49,10 +49,10 @@ export default function FaPage() {
                         <input className="input column is-1 ml-1" type="number" value={Fm} onChange={handleFmChange} onKeyDown={handleKeyPress} name="Fm" placeholder="m ="/>
                     </div>
 
-            <div className="field is-horizontal is-flex is-justify-content-center">
+            {/* <div className="field is-horizontal is-flex is-justify-content-center">
                     <label className="label has-text-white">a =</label>
                         <input className="input column is-1 ml-3" type="number" placeholder="?" disabled/>
-                    </div>
+                    </div> */}
                 <div className="field">
                 <div className="control is-flex is-justify-content-center ml-5">
                     <button className="button is-link" onClick={calculateA}>Calculate a!</button>
