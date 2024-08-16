@@ -36,7 +36,7 @@ export default function FmPage() {
         };
     return (
         <>
-            <h1 className='has-text-white has-text-weight-bold'>Solving for m!</h1>
+            <h1 className='has-text-white has-text-weight-bold'>Solving for Mass!</h1>
             <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3'>m = F/a</h1>
             <div className="field is-horizontal">
                 <label className="label has-text-white ">F =</label>

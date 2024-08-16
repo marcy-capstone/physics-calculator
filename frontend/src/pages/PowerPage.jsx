@@ -18,7 +18,7 @@ export default function VelocityPage() {
 
     return (
         <>
-        <h1 className='has-text-white has-text-weight-bold'>Velocity</h1>
+        <h1 className='has-text-white has-text-weight-bold'>Power</h1>
         <div className="field">
             <label className='label has-text-white'>Variables</label>
             <div className="control">

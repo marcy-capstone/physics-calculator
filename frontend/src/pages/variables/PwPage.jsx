@@ -37,7 +37,7 @@ export default function PwPage() {
     return (
         <>
             <h1 className='has-text-white has-text-weight-bold'>Solving for Work!</h1>
-            <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3'>W = Pt</h1>
+            <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3'>W = P•t</h1>
             <div className="field is-horizontal">
                 <label className="label has-text-white ">P =</label>
                     <div className="control">

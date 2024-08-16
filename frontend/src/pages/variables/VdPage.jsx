@@ -36,8 +36,8 @@ export default function VdPage() {
         };
     return (
         <>
-            <h1 className='has-text-white has-text-weight-bold'>Solving for d!</h1>
-            <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3'>d = Vt</h1>
+            <h1 className='has-text-white has-text-weight-bold'>Solving for Displacement!</h1>
+            <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3'>d = V•t</h1>
             <div className="field is-horizontal">
                 <label className="label has-text-white ">V =</label>
                     <div className="control">

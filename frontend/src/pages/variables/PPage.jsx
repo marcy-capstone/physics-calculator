@@ -36,7 +36,7 @@ export default function PPage() {
         };
     return (
         <>
-            <h1 className='has-text-white has-text-weight-bold'>Solving for P!</h1>
+            <h1 className='has-text-white has-text-weight-bold'>Solving for Power!</h1>
             <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3'>P = W/t</h1>
             {/* <div className='box has-background-grey-dark' style={{ outline: '5px solid black', maxWidth: '277px'}}> */}
                 <div className="field is-horizontal">

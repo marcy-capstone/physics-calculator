@@ -36,8 +36,8 @@ export default function FPage() {
         };
     return (
         <>
-            <h1 className='has-text-white has-text-weight-bold'>Solving for F!</h1>
-            <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3'>F = ma</h1>
+            <h1 className='has-text-white has-text-weight-bold'>Solving for Force!</h1>
+            <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3'>F = m•a</h1>
             {/* <div className='box has-background-grey-dark' style={{ outline: '5px solid black', maxWidth: '277px'}}> */}
                 <div className="field is-horizontal">
                     <label className="label has-text-white">F =</label>

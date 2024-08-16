@@ -42,7 +42,7 @@ export default function VPage() {
         };
     return (
         <>
-            <h1 className='has-text-white has-text-weight-bold'>Solving for V!</h1>
+            <h1 className='has-text-white has-text-weight-bold'>Solving for Velocity!</h1>
             <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3'>V = d/t</h1>
             {/* <div className='box has-background-grey-dark' style={{ outline: '5px solid black', maxWidth: '277px'}}> */}
                 <div className="field is-horizontal">
