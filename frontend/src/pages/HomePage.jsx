@@ -13,8 +13,8 @@ export default function HomePage() {
     return (
         <>
             <div>
-                <label className='label has-text-white is-flex is-justify-content-center is-large'>Choose an Equation Below:</label>
-                <div className='is-flex is-justify-content-center is-justify-content-space-evenly'>
+                <label className='label has-text-white is-flex is-justify-content-center is-large my-3'>Choose an Equation Below:</label>
+                <div className='is-flex is-justify-content-center is-justify-content-space-evenly my-5'>
                     {
                         EQUATIONS.map((equation) => {
                             return <button className="button is-link is-large is-flex-direction-row" key={equation.name} value={equation.name} onClick={() => navigate(equation.route)}>{equation.name}</button>
