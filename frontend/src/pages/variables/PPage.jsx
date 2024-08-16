@@ -36,7 +36,7 @@ export default function PPage() {
         };
     return (
         <>
-            <h1 className='has-text-white has-text-weight-bold is-flex is-justify-content-center'>Solving for P!</h1>
+            <h1 className='has-text-white has-text-weight-bold is-flex is-justify-content-center'>Solving for Power!</h1>
             <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3 is-flex is-justify-content-center'>P = W/t</h1>
             {/* <div className='box has-background-grey-dark' style={{ outline: '5px solid black', maxWidth: '277px'}}> */}
             <div className='is-flex is-flex-direction-column'>
@@ -50,7 +50,7 @@ export default function PPage() {
                 </div>
                 <div className="field is-horizontal is-flex is-justify-content-center">
                     <label className="label has-text-white">t =</label>
-                        <input className="input column is-1 ml-2" type="number" value={Pt} onChange={handlePtChange} onKeyDown={handleKeyPress} name="Pt" placeholder="t ="/>
+                        <input className="input column is-1 ml-3" type="number" value={Pt} onChange={handlePtChange} onKeyDown={handleKeyPress} name="Pt" placeholder="t ="/>
                 </div>
             {/* </div> */}
             <div className="field ">

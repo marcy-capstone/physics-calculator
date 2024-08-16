@@ -36,7 +36,7 @@ export default function FaPage() {
         };
     return (
         <>
-            <h1 className='has-text-white has-text-weight-bold'>Solving for a!</h1>
+            <h1 className='has-text-white has-text-weight-bold'>Solving for Acceleration!</h1>
             <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3'>a = F/m</h1>
             <div className="field is-horizontal">
                 <label className="label has-text-white ">F =</label>

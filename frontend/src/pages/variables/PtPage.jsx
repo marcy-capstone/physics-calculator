@@ -36,38 +36,32 @@ export default function PtPage() {
         };
     return (
         <>
-            <h1 className='has-text-white has-text-weight-bold'>Solving for t!</h1>
-            <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3'>t = P/W</h1>
-            <div className="field is-horizontal">
-                <label className="label has-text-white ">P =</label>
-                    <div className="control">
-                        <input className="input column is-4 ml-3" type="number" value={P} onChange={handlePChange} name="P" placeholder="P ="/>
+            <h1 className='has-text-white has-text-weight-bold is-flex is-justify-content-center'>Solving for Time!</h1>
+            <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3 is-flex is-justify-content-center'>t = P/W</h1>
+            <div className='is-flex is-flex-direction-column'>
+                <div className="field is-horizontal is-flex is-justify-content-center">
+                    <label className="label has-text-white ">P =</label>
+                            <input className="input column is-1 ml-2" type="number" value={P} onChange={handlePChange} name="P" placeholder="P ="/>
+                        </div>
+                <div className="field is-horizontal is-flex is-justify-content-center">
+                        <label className="label has-text-white">W =</label>
+                            <input className="input column is-1 ml-1" type="number" value={Pw} onChange={handlePwChange} onKeyDown={handleKeyPress} name="Pw" placeholder="W ="/>
+                        </div>
+                <div className="field is-horizontal is-flex is-justify-content-center">
+                        <label className="label has-text-white">t =</label>
+                            <input className="input column is-1 ml-3" type="number" placeholder="?" disabled/>
+                        </div>
+                    <div className="field">
+                    <div className="control is-flex is-justify-content-center ml-5">
+                        <button className="button is-link" onClick={calculatePt}>Calculate t!</button>
                     </div>
-                    </div>
-
-            <div className="field is-horizontal">
-                    <label className="label has-text-white">W =</label>
-                    <div className="control">
-                        <input className="input column is-4 ml-2" type="number" value={Pw} onChange={handlePwChange} onKeyDown={handleKeyPress} name="Pw" placeholder="W ="/>
-                    </div>
-                    </div>
-
-            <div className="field is-horizontal">
-                    <label className="label has-text-white">t =</label>
-                    <div className="control">
-                        <input className="input column is-4 ml-4" type="number" placeholder="?" disabled/>
-                    </div>
-                    </div>
-                <div className="field">
-                <div className="control">
-                    <button className="button is-link" onClick={calculatePt}>Calculate t!</button>
                 </div>
+                {result !== null && (
+                    <div className="field control is-flex is-justify-content-center ml-5">
+                        <p className='has-text-white'>t = {result} s</p>
+                    </div>
+                )}
             </div>
-            {result !== null && (
-                <div className="field">
-                    <p className='has-text-white'>t = {result} s</p>
-                </div>
-            )}
         </>
     )
 }
