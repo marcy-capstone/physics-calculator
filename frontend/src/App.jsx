@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
     {/* <BackendTest /> */}
-    <h1 className='has-text-white has-text-weight-bold'>Maya's Physics Calculator!</h1>
+    <h1 className='has-text-white has-text-weight-bold is-flex is-justify-content-center'>Maya's Physics Calculator!</h1>
       <Routes>
         <Route path="/static" element={<HomePage />}/>
         <Route path="/static/velocity" element={<VelocityPage />}/>
