@@ -4,12 +4,6 @@ export default function VPage() {
         // State variables for Vd, Vt, and the result
         const [Vd, setVd] = useState('');
         const [Vt, setVt] = useState('');
-
-        const [variableValues, setVariableValues] = useState({
-            Vd: '',
-            Vt: ''
-        })
-
         const [result, setResult] = useState(null);
     
         // Event handlers for input changes
