@@ -7,7 +7,6 @@ const EQUATIONS = [
     { name: 'Power', route: "/static/power"},
 ]
 
-
 export default function HomePage() {
     const navigate = useNavigate();
 
