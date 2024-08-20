@@ -16,6 +16,20 @@ class User(db.Model):
 
     def __repr__(self):
         return '<User %r>' % self.username
+    
+
+    # create method
+
+    # list all users method
+    
+class Result(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    equation = db.Column(db.String(50))
+    variable = db.Column(db.String(100), unique=True)
+    time_submitted = db.Column(db.Date, default=lambda: datetime.now(timezone.utc))
+
+    def __repr__(self):
+        return '<Result %r>' % self.equation
 
 with app.app_context():
     db.create_all()
