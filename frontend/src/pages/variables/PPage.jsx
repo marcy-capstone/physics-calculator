@@ -21,7 +21,7 @@ export default function PPage() {
             const PtValue = parseFloat(Pt);
     
             if (!isNaN(PwValue) && !isNaN(PtValue) && PtValue !== 0) {
-                const p = PwValue * PtValue;
+                const p = PwValue / PtValue;
                 setResult(p);
             } else {
                 setResult('Invalid input'); // Handle invalid cases

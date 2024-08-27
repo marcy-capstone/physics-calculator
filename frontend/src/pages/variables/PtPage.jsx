@@ -41,7 +41,7 @@ export default function PtPage() {
             <div className='is-flex is-flex-direction-column'>
                 <div className="field is-horizontal is-flex is-justify-content-center">
                     <label className="label has-text-white ">P =</label>
-                            <input className="input column is-1 ml-2" type="number" value={P} onChange={handlePChange} name="P" placeholder="P ="/>
+                            <input className="input column is-1 ml-2" type="number" value={P} onChange={handlePChange} onKeyDown={handleKeyPress} name="P" placeholder="P ="/>
                         </div>
                 <div className="field is-horizontal is-flex is-justify-content-center">
                         <label className="label has-text-white">W =</label>

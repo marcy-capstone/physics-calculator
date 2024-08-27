@@ -41,7 +41,7 @@ export default function VtPage() {
             <div className='is-flex is-flex-direction-column'>
             <div className="field is-horizontal is-flex is-justify-content-center">
                 <label className="label has-text-white ">V =</label>
-                        <input className="input column is-1 ml-2" type="number" value={V} onChange={handleVChange} name="V" placeholder="V ="/>
+                        <input className="input column is-1 ml-2" type="number" value={V} onChange={handleVChange} onKeyDown={handleKeyPress} name="V" placeholder="V ="/>
                     </div>
 
             <div className="field is-horizontal is-flex is-justify-content-center">
