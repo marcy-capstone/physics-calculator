@@ -1,39 +1,27 @@
-import React, { useState } from 'react';
-import ForcePage from './ForcePage';
-import VelocityPage from './VelocityPage';
-import PowerPage from './PowerPage';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const EQUATIONS = [
-    { name: 'Velocity', component: <VelocityPage />},
-    { name: 'Force', component: <ForcePage />},
-    { name: 'Power', component: <PowerPage />},
+    { name: 'Velocity', route: "/static/velocity"},
+    { name: 'Force', route: "/static/force"},
+    { name: 'Power', route: "/static/power"},
 ]
 
 export default function HomePage() {
-    const [equation, setEquation] = useState(''); // State to manage form data
-
-    const handleChange = (event) => {
-        setEquation(event.target.value);
-    };
+    const navigate = useNavigate();
 
     return (
         <>
-                <label className='label has-text-white'>Equation</label>
-                <div className="control">
-                    <div className="select">
-                        <select className="option" onChange={handleChange} value={equation}>
-                            <option>Choose...</option>
-                            {
-                                EQUATIONS.map((equation) => {
-                                    return <option key={equation.name} value={equation.name}>{equation.name}</option>
-                                })
-                            }
-                        </select>
-                    </div>
+            <div>
+                <label className='label has-text-white is-flex is-justify-content-center is-large my-3'>Choose an Equation Below:</label>
+                <div className='is-flex is-justify-content-center is-justify-content-space-evenly my-5'>
+                    {
+                        EQUATIONS.map((equation) => {
+                            return <button className="button is-link is-large is-flex-direction-row" key={equation.name} value={equation.name} onClick={() => navigate(equation.route)}>{equation.name}</button>
+                        })
+                    }
                 </div>
-            {
-                EQUATIONS.find((eq) => eq.name === equation)?.component
-            }
+            </div>
         </>
     )
 }

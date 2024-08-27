@@ -36,38 +36,34 @@ export default function FPage() {
         };
     return (
         <>
-            <h1 className='has-text-white has-text-weight-bold'>Solving for F!</h1>
-            <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3'>F = ma</h1>
+            <h1 className='has-text-white has-text-weight-bold is-flex is-justify-content-center'>Solving for Force!</h1>
+            <h1 className='has-text-white has-text-weight-medium is-size-2 mb-3 is-flex is-justify-content-center'>F = m•a</h1>
             {/* <div className='box has-background-grey-dark' style={{ outline: '5px solid black', maxWidth: '277px'}}> */}
-                <div className="field is-horizontal">
+            <div className='is-flex is-flex-direction-column'>
+                <div className="field is-horizontal is-flex is-justify-content-center">
                     <label className="label has-text-white">F =</label>
-                    <div className="control">
-                        <input className="input column is-4 ml-3" type="number" placeholder="?" disabled />
-                    </div>
+                        <input className="input column is-1 ml-2" type="number" placeholder="?" disabled />
                 </div>
-                <div className="field is-horizontal">
+                <div className="field is-horizontal is-flex is-justify-content-center">
                     <label className="label has-text-white">m =</label>
-                    <div className="control">
-                        <input className="input column is-4 ml-2" type="number" value={Fm} onChange={handleFmChange} onKeyDown={handleKeyPress} name="Fm" placeholder="m ="/>
-                    </div>
+                        <input className="input column is-1 ml-1" type="number" value={Fm} onChange={handleFmChange} onKeyDown={handleKeyPress} name="Fm" placeholder="m ="/>
                 </div>
-                <div className="field is-horizontal">
+                <div className="field is-horizontal is-flex is-justify-content-center">
                     <label className="label has-text-white">a =</label>
-                    <div className="control">
-                        <input className="input column is-4 ml-3" type="number" value={Fa} onChange={handleFaChange} onKeyDown={handleKeyPress} name="Fa" placeholder="a ="/>
-                    </div>
+                        <input className="input column is-1 ml-3" type="number" value={Fa} onChange={handleFaChange} onKeyDown={handleKeyPress} name="Fa" placeholder="a ="/>
                 </div>
             {/* </div> */}
             <div className="field">
-                <div className="control">
+                <div className="control is-flex is-justify-content-center ml-5">
                     <button className="button is-link" onClick={calculateF}>Calculate F!</button>
                 </div>
             </div>
             {result !== null && (
-                <div className="field">
+                <div className="field is-flex is-justify-content-center ml-5">
                     <p className='has-text-white'>F = {result} N</p>
                 </div>
             )}
+            </div>
         </>
     )
 }
